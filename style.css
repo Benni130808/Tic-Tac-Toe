@@ -1,0 +1,144 @@
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background-color: #faf8ef;
+  color: #776e65;
+}
+.kopfzeile {
+  width: min(400px, calc(100vw - 32px));
+  margin: 30px auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.kopfzeile h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  letter-spacing: -2px;
+}
+.kopfzeile h3 {
+  margin: 0;
+  padding: 8px 14px;
+  background-color: #bbada0;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.spielfeld {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: min(400px, calc(100vw - 32px));
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #bbada0;
+    border-radius: 8px;
+}
+.zelle {
+  display: flex;
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ccc;
+  border-radius: 5px;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+  cursor: pointer;
+}
+.spieler-x {
+  background-color: #f2b179;
+}
+.spieler-o {
+  background-color: #6a89cc;
+}
+#neues-spiel {
+  border: none;
+  border-radius: 6px;
+  padding: 11px 14px;
+  background-color: #8f7a66;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#neues-spiel:hover {
+  background-color: #9f8b77;
+}
+@media (max-width: 650px) {
+  .spiel-layout {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .spiel-layout h1 {
+    margin: 0;
+    text-align: center;
+  }
+  .kopfzeile {
+    justify-content: center;
+  }
+}
+.spiel-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin: 30px auto;
+}
+.spielbereich {
+  width: min(400px, calc(100vw - 32px));
+  position: relative;
+}
+#spielende-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(250, 248, 239, 0.85);
+  border-radius: 8px;
+}
+#spielende-overlay[hidden] {
+  display: none;
+}
+.spielende-karte {
+  width: min(280px, calc(100% - 40px));
+  box-sizing: border-box;
+  padding: 28px;
+  border-radius: 8px;
+  background-color: #bbada0;
+  color: #f9f6f2;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+.spielende-karte h2 {
+  margin-top: 0;
+}
+.spielende-karte button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #8f7a66;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+.spielende-karte button:hover {
+  background-color: #9f8b77;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="spiel-layout">
+      <h1>Tic Tac Toe</h1>
+      <div class="spielbereich">
+        <div class="kopfzeile">
+          <h3>Spieler 1: <span id="punktestand-1">0</span></h3>
+          <h3>Spieler 2: <span id="punktestand-2">0</span></h3>
+        </div>
+        <div class="spielfeld">
+          <button class="zelle" data-index="zelle-0"></button>
+          <button class="zelle" data-index="zelle-1"></button>
+          <button class="zelle" data-index="zelle-2"></button>
+          <button class="zelle" data-index="zelle-3"></button>
+          <button class="zelle" data-index="zelle-4"></button>
+          <button class="zelle" data-index="zelle-5"></button>
+          <button class="zelle" data-index="zelle-6"></button>
+          <button class="zelle" data-index="zelle-7"></button>
+          <button class="zelle" data-index="zelle-8"></button>
+        </div>
+        <div id="spielende-overlay" hidden>
+          <div class="spielende-karte">
+            <h2>Spiel vorbei!</h2>
+            <p>
+              <span id="gewinner-label">Gewinner: </span>
+              <span id="gewinner">Spieler 1</span>
+            </p>
+            <button id="nochmal-spielen">Noch einmal spielen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
