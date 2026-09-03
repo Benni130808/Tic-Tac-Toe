@@ -7,6 +7,7 @@ let aktuellerSpieler = "X";
 let spielBeendet = false;
 let punktestand1 = 0;
 let punktestand2 = 0;
+let naechsterStartSpieler = "X";
 const kombinationen = [
   [0, 1, 2],
   [3, 4, 5],
@@ -121,7 +122,8 @@ function neuesSpiel() {
     ["", "", ""],
     ["", "", ""],
   ];
-  aktuellerSpieler = "X";
+  aktuellerSpieler = naechsterStartSpieler;
+  naechsterStartSpieler = aktuellerSpieler === "X" ? "O" : "X";
   spielBeendet = false;
   aktualisiereSpielfeld();
 }
