@@ -53,6 +53,8 @@ body {
     background-color 150ms ease,
     color 150ms ease;
   cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 .spieler-x {
   background-color: #f2b179;
